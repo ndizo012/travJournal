@@ -1,9 +1,15 @@
 import React from "react"
+import data from "./data";
+import NavBar from "./components/Navbar";
+import Card from "./components/Card";
+
 
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <NavBar />
+      <Card />
+      <Card />
     </div>
   );
 }
