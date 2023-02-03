@@ -27,7 +27,7 @@ p.loc {
 }
 
 p.date {
-    margin-bottom: 5px;
+    margin-bottom: 0.313rem;
     font-weight: bold;
 }
 
@@ -35,7 +35,7 @@ p.date {
     margin: 0%;
     display: flex;
     padding: 1.563rem 1.563rem 1rem;
-    border: 3px solid green;
+    /*border: 3px solid green; */
 }
 
 .card--image {
@@ -48,10 +48,15 @@ p.date {
 .card--content {
     flex-direction: column;
     margin-left: 1rem;
-    border: 3px solid red;
+    /*border: 3px solid red; */
+}
+
+.card--star {
+    position:relative; top:0.063rem;
+    max-width: 1rem;
 }
 
 .card--title {
     margin-top: auto;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }

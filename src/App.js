@@ -5,11 +5,20 @@ import Card from "./components/Card";
 
 
 function App() {
+
+  const cards = data.map (item =>{
+    return <Card
+    key = {item.id}
+    item = {item}
+    />
+  })
+
   return (
     <div>
       <NavBar />
-      <Card />
-      <Card />
+      <section className="cards-list">
+        {cards}
+      </section>
     </div>
   );
 }

@@ -1,16 +1,18 @@
 import React from "react";
-import Image from "../images/japan.png"
+import Location from "../images/location.png"
 
-export default function Card() {
+export default function Card(props) {
     return (
     <div className="card">
         
-        <img src={Image} className="card--image"/>
+        {/*alternatively for local files src={require(`../images/${props.item.imageLocal}`)}*/}
+        <img src={props.item.imageUrl} className="card--image"/>
         <div className="card--content">
-            <p className="loc">Japan • <a href="https://goo.gl/maps/1DGM5WrWnATgkSNB8">View on Google Maps</a></p>
-            <h1 className="card--title">Mount Fuji</h1>
-            <p className="date">Jan 12 - Feb 20</p>
-            <p>Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.</p>
+            <img src={Location} className="card--star"/>
+            <span className="loc"> {props.item.location} • <a href={props.item.googleMapsUrl}>View on Google Maps</a></span>
+            <h1 className="card--title">{props.item.title}</h1>
+            <p className="date">{props.item.startDate} - {props.item.endDate}</p>
+            <p>{props.item.description}</p>
         </div>
     </div>
     )
