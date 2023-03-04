@@ -6,9 +6,9 @@ export default function Card(props) {
     <div className="card">
         
         {/*alternatively for local files src={require(`../images/${props.item.imageLocal}`)}*/}
-        <img src={props.item.imageUrl} className="card--image"/>
+        <img src={props.item.imageUrl} className="card--image" alt="scenery"/>
         <div className="card--content">
-            <img src={Location} className="card--star"/>
+            <img src={Location} className="card--star" alt="ping"/>
             <span className="loc"> {props.item.location} • <a href={props.item.googleMapsUrl}>View on Google Maps</a></span>
             <h1 className="card--title">{props.item.title}</h1>
             <p className="date">{props.item.startDate} - {props.item.endDate}</p>
